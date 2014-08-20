@@ -10,3 +10,4 @@
 - Ruby
 - Bundler
 - platex
+- pandoc
