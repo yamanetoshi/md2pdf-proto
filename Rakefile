@@ -66,6 +66,14 @@ task :pdf => "#{TARGETNAME}.pdf"
 desc 'generate EPUB file'
 task :epub => "#{TARGETNAME}.epub"
 
+desc 'generate html file'
+task :pandoc => "#{TARGETNAME}.html"
+
+file "#{TARGETNAME}.html" => ["#{TARGETNAME}.md"] do
+  sh "rm -f #{TARGETNAME}.html"
+  sh "pandoc -f markdown -t html5 --template default.html5 -o #{TARGETNAME}.html #{TARGETNAME}.md"
+end
+
 SRC = FileList['*.re'] +  ["config.yml"]
 
 file "#{TARGETNAME}.pdf" => RESRCS do
