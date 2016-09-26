@@ -13,7 +13,7 @@ prt: mhidaka
 prt_url:  http://techbooster.org/
 #edt: mhidaka
 #dsr: yuya
-date: v0.0.1
+date: 2016.9.30
 #rights: |
 #  (C) 2013 techbooster.org
 #description: ReVIEW執筆経験者による執筆ノウハウをまとめました。
@@ -37,8 +37,12 @@ urnid: http://techbooster.org/book/Beginners-ReVIEW
 # CSSファイル (yamlファイルおよびReVIEWファイルを置いたディレクトリにあること
 stylesheet: main.css
 # LaTeX用のdocumentclassを指定する
+texcommand: platex
+texoptions: "-kanji=utf-8"
 texstyle: tatsumacro
 texdocumentclass: ["jsbook", "oneside,14pt"]
+dvicommand: dvipdfmx
+dvioptions: "-d 5"
 # 目次として抽出するレベル
 toclevel: 2
 # セクション番号を表示するレベル
